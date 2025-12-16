@@ -29,7 +29,6 @@ Scrolling up restores REVEAL_BATCH older turns to allow reading without overload
 At the end of the stream or on command, all turns are flushed and reinserted
 
 ## Advantages of This Approach:
-This script is designed to be robust, lightweight, and future-proof. Key aspects include:
 - Non-invasive DOM management. (Only the oldest chat turns are detached and replaced with lightweight placeholders, leaving the active stream untouched)
 - Batching and debounce for performance. (Older turns are restored in small batches only when needed, preventing UI freezes or lag.
 - Conservative streaming handling.(The script detects stream activity and flushes turns appropriately, ensuring smooth rendering of new messages)
