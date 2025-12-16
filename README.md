@@ -28,6 +28,18 @@ When the DOM exceeds VISIBLE_KEEP turns, the oldest turns are detached and repla
 Scrolling up restores REVEAL_BATCH older turns to allow reading without overloading the UI
 At the end of the stream or on command, all turns are flushed and reinserted
 
+## Advantages of This Approach:
+This script is designed to be robust, lightweight, and future-proof. Key aspects include:
+-Non-invasive DOM management
+-Only the oldest chat turns are detached and replaced with lightweight placeholders, leaving the active stream untouched.
+-Batching and debounce for performance
+-Older turns are restored in small batches only when needed, preventing UI freezes or lag.
+-Conservative streaming handling
+-The script detects stream activity and flushes turns appropriately, ensuring smooth rendering of new messages.
+-Future compatibility
+-By avoiding aggressive prototype patches or complex DOM manipulations, this approach is less likely to break with updates to ChatGPT Web.
+-This method focuses on maintaining fluidity in long chats while keeping the interface responsive and easy to use.
+
 ## Notes:
 This approach resolves long-standing freezes and lag issues in long chats.
 Conservative and non-invasive: streaming and token flow remain fully intact
