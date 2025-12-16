@@ -5,11 +5,11 @@ This Tampermonkey/GreaseMonkey script dynamically detaches older chat turns and 
 It does not modify prototypes or patch native functions, ensuring safe and conservative operation while keeping native streaming intact.
 
 ## Configuration:
-const VISIBLE_KEEP = 8;   // Number of most recent turns to keep visible
-const REVEAL_BATCH = 8;   // Number of turns to restore when scrolling up
-For very long chats (>200 turns): VISIBLE_KEEP = 6-8, REVEAL_BATCH = 2-4
+const VISIBLE_KEEP = 8  // Number of most recent turns to keep visible
+const REVEAL_BATCH = 8  // Number of turns to restore when scrolling up
+For very long chats (>200 turns): VISIBLE_KEEP = 6, REVEAL_BATCH = 4
 For medium-length chats: default values work well
-For short chats: VISIBLE_KEEP can be increased to 12–16
+For short chats: VISIBLE_KEEP can be increased to 16 or more
 
 ## Compatibility:
 ChatGPT Web: https://chat.openai.com/*
@@ -18,7 +18,7 @@ Browsers: Chrome, Firefox, Edge (with Tampermonkey or GreaseMonkey)
 
 ## Installation:
 Install Tampermonkey or GreaseMonkey
-Create a new script and paste chatgpt-detach.js
+Create a new script and paste [chatgpt-detach.js](https://github.com/aston89/ChatGPT-Conservative-Anti-Freeze-for-Long-Chats/blob/main/chatgpt-detach.js)
 Save and enable the script
 Use the Detach ON/OFF button at the bottom-right to toggle functionality
 
