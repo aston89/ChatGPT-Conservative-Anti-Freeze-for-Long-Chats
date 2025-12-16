@@ -1,37 +1,37 @@
 # ChatGPT-Conservative-Anti-Freeze-for-Long-Chats
 
-##Description:
+## Description:
 This Tampermonkey/GreaseMonkey script dynamically detaches older chat turns and replaces them with lightweight placeholders, significantly reducing DOM load and improving streaming chat experience.
 It does not modify prototypes or patch native functions, ensuring safe and conservative operation while keeping native streaming intact.
 
-##Configuration:
+## Configuration:
 const VISIBLE_KEEP = 8;   // Number of most recent turns to keep visible
 const REVEAL_BATCH = 8;   // Number of turns to restore when scrolling up
 For very long chats (>200 turns): VISIBLE_KEEP = 6-8, REVEAL_BATCH = 2-4
 For medium-length chats: default values work well
 For short chats: VISIBLE_KEEP can be increased to 12–16
 
-##Compatibility:
+## Compatibility:
 ChatGPT Web: https://chat.openai.com/*
 ChatGPT.com: https://chatgpt.com/*
 Browsers: Chrome, Firefox, Edge (with Tampermonkey or GreaseMonkey)
 
-##Installation:
+## Installation:
 Install Tampermonkey or GreaseMonkey
 Create a new script and paste chatgpt-detach.js
 Save and enable the script
 Use the Detach ON/OFF button at the bottom-right to toggle functionality
 
-##How it works:
+## How it works:
 The script observes the chat feed using a MutationObserver
 When the DOM exceeds VISIBLE_KEEP turns, the oldest turns are detached and replaced with lightweight comment placeholders
 Scrolling up restores REVEAL_BATCH older turns to allow reading without overloading the UI
 At the end of the stream or on command, all turns are flushed and reinserted
 
-##Notes:
+## Notes:
 This approach resolves long-standing freezes and lag issues in long chats.
 Conservative and non-invasive: streaming and token flow remain fully intact
 Optimizes the DOM without sacrificing user experience
 
-##Postscriptum:
-I know "lazychat++" exist but for me it never worked as intended.
+## Post Scriptum:
+I know "[lazychat++](https://github.com/AlexSHamilton/chatgpt-lazy-chat-plusplus)" exist but for me it never worked as intended.
