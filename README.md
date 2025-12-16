@@ -36,7 +36,7 @@ This script is designed to be robust, lightweight, and future-proof. Key aspects
 - Future compatibility. (By avoiding aggressive prototype patches or complex DOM manipulations, this approach is less likely to break with updates to ChatGPT Web)
 - This method focuses on maintaining fluidity in long chats while keeping the interface responsive and easy to use.
 
-## Notes:
+## TL;DR:
 This approach resolves long-standing freezes and lag issues in long chats.
 Conservative and non-invasive: streaming and token flow remain fully intact
 Optimizes the DOM without sacrificing user experience
