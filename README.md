@@ -1,4 +1,4 @@
-# ChatGPT-Conservative-Anti-Freeze-for-Long-Chats
+# ChatGPT Conservative Anti-Freeze for Long Chats
 
 ## Description:
 This Tampermonkey/GreaseMonkey script dynamically detaches older chat turns and replaces them with lightweight placeholders, significantly reducing DOM load and improving streaming chat experience.
