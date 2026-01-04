@@ -17,11 +17,11 @@ ChatGPT.com: https://chatgpt.com/*
 Browsers: Chrome, Firefox, Edge (with Tampermonkey or GreaseMonkey)
 
 ## Installation:
-Install Tampermonkey or GreaseMonkey
-Create a new script and paste [chatgpt-detach.js](https://github.com/aston89/ChatGPT-Conservative-Anti-Freeze-for-Long-Chats/blob/main/chatgpt-detach.js)
-Save and enable the script
-Use the Detach ON/OFF button at the bottom-right to toggle functionality
-If you are using Firefox, [check this parameter tweak !](https://github.com/aston89/ChatGPT-Conservative-Anti-Freeze-for-Long-Chats/blob/main/firefox-tweak.md)
+- Install Tampermonkey or GreaseMonkey.
+- Create a new script and paste [chatgpt-detach.js](https://github.com/aston89/ChatGPT-Conservative-Anti-Freeze-for-Long-Chats/blob/main/chatgpt-detach.js).
+- Save and enable the script.
+- Use the Detach ON/OFF button at the bottom-right to toggle functionality.
+- If you are using Firefox, [check this parameter tweak !](https://github.com/aston89/ChatGPT-Conservative-Anti-Freeze-for-Long-Chats/blob/main/firefox-tweak.md).
 
 ## How it works:
 The script observes the chat feed using a MutationObserver
