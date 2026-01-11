@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         ChatGPT Detach-for-Long-Chats v0.9 (improved)
+// @name         ChatGPT Conservative Anti-Freeze for Long Chats
 // @namespace    chatgpt-detach
-// @version      0.9
-// @description  Detach old chat turns (store placeholders) to avoid huge DOM and UI freezes; conservative, non-invasive, chunked removals and safe restores.
+// @version      1.0
+// @description  Detach old chat turns to avoid huge DOM and UI freezes; conservative, non-invasive, chunked removals and safe restores.
 // @match        https://chat.openai.com/*
 // @match        https://chatgpt.com/*
 // @run-at       document-end
@@ -13,8 +13,8 @@
   'use strict';
 
   // ---------- CONFIG ----------
-  const VISIBLE_KEEP = 8;            // keep these latest turns in DOM (including current streaming turn)
-  const REVEAL_BATCH = 8;            // how many to re-insert per reveal
+  const VISIBLE_KEEP = 4;            // keep these latest turns in DOM (including current streaming turn)
+  const REVEAL_BATCH = 4;            // how many to re-insert per reveal
   const NEAR_BOTTOM_PX = 140;        // px from bottom considered "at bottom"
   const OBS_DEBOUNCE_MS = 160;       // debounce for observer reactions
   const BUTTON_ID = 'detach-toggle-btn';
